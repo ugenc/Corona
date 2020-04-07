@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		0C3C5733243C7F8C00693F70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5731243C7F8C00693F70 /* Main.storyboard */; };
 		0C3C5735243C7F8D00693F70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5734243C7F8D00693F70 /* Assets.xcassets */; };
 		0C3C5738243C7F8D00693F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5736243C7F8D00693F70 /* LaunchScreen.storyboard */; };
+		0C3C5741243C7FE600693F70 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0C3C5740243C7FE600693F70 /* SwiftyJSON */; };
+		0CE7A58F243C822C00C0EB3B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0CE7A58E243C822C00C0EB3B /* Alamofire */; };
+		0CE7A594243CA34600C0EB3B /* DunyaFonk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */; };
+		0CE7A596243CAF2800C0EB3B /* TurkiyeFonk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */; };
+		0CE7A598243CD17B00C0EB3B /* StartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A597243CD17B00C0EB3B /* StartData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,9 @@
 		0C3C5734243C7F8D00693F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3C5737243C7F8D00693F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3C5739243C7F8D00693F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DunyaFonk.swift; sourceTree = "<group>"; };
+		0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurkiyeFonk.swift; sourceTree = "<group>"; };
+		0CE7A597243CD17B00C0EB3B /* StartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3C5741243C7FE600693F70 /* SwiftyJSON in Frameworks */,
+				0CE7A58F243C822C00C0EB3B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,7 @@
 		0C3C572A243C7F8C00693F70 /* Korona */ = {
 			isa = PBXGroup;
 			children = (
+				0CE7A590243C89CE00C0EB3B /* Model */,
 				0C3C572B243C7F8C00693F70 /* AppDelegate.swift */,
 				0C3C572D243C7F8C00693F70 /* SceneDelegate.swift */,
 				0C3C572F243C7F8C00693F70 /* ViewController.swift */,
@@ -65,6 +76,16 @@
 				0C3C5739243C7F8D00693F70 /* Info.plist */,
 			);
 			path = Korona;
+			sourceTree = "<group>";
+		};
+		0CE7A590243C89CE00C0EB3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */,
+				0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */,
+				0CE7A597243CD17B00C0EB3B /* StartData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +104,10 @@
 			dependencies = (
 			);
 			name = Korona;
+			packageProductDependencies = (
+				0C3C5740243C7FE600693F70 /* SwiftyJSON */,
+				0CE7A58E243C822C00C0EB3B /* Alamofire */,
+			);
 			productName = Korona;
 			productReference = 0C3C5728243C7F8C00693F70 /* Korona.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +136,10 @@
 				Base,
 			);
 			mainGroup = 0C3C571F243C7F8C00693F70;
+			packageReferences = (
+				0C3C573F243C7FE600693F70 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				0CE7A58D243C822C00C0EB3B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 0C3C5729243C7F8C00693F70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3C5730243C7F8C00693F70 /* ViewController.swift in Sources */,
+				0CE7A594243CA34600C0EB3B /* DunyaFonk.swift in Sources */,
+				0CE7A598243CD17B00C0EB3B /* StartData.swift in Sources */,
 				0C3C572C243C7F8C00693F70 /* AppDelegate.swift in Sources */,
+				0CE7A596243CAF2800C0EB3B /* TurkiyeFonk.swift in Sources */,
 				0C3C572E243C7F8C00693F70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +370,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C3C573F243C7FE600693F70 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		0CE7A58D243C822C00C0EB3B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C3C5740243C7FE600693F70 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C3C573F243C7FE600693F70 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		0CE7A58E243C822C00C0EB3B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CE7A58D243C822C00C0EB3B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0C3C5720243C7F8C00693F70 /* Project object */;
 }
