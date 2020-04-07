@@ -18,51 +18,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var toggleDegisti: UISegmentedControl!
     @IBOutlet weak var olumOrani: UILabel!
     
-
+    @IBOutlet weak var neredeLabel: UILabel!
+    
+    
+    
+    
+    let locale = NSLocale.current.regionCode
+ 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let a = DunyaFonk()
-      
-
-        olumSayisi.text = String(a.0)
-        kurtulanSayisi.text = String(a.1)
-        teshisSayisi.text = String(a.2)
-        if a.2 != 0 {
-            olumOrani.text = ("%\(100*a.0/a.2)")
-        }
-    
-
         
-        print("dünya")
-        
+        print(locale)
         
         AF.request("https://covidapi.info/api/v1/global").responseJSON { dunyaCevap in
             switch dunyaCevap.result {
             case .success(let value):
-
+                
                 let json = JSON(value)
-
+                
                 let olum = json["result"]["deaths"].intValue
                 let iyi = json["result"]["recovered"].intValue
                 let teshis = json["result"]["confirmed"].intValue
-
-
+                
+                
                 self.olumSayisi.text = String(olum)
                 self.kurtulanSayisi.text = String(iyi)
                 self.teshisSayisi.text = String(teshis)
-                //self.olumOrani.text = ("%\(100*olum/teshis)")
-
-
-
+                self.olumOrani.text = ("%\(100*olum/teshis)")
+                
+                
+                
             case .failure(let error):
                 print(error)
             }
-
+            
         }
-
+        
         
         
         
@@ -71,43 +66,91 @@ class ViewController: UIViewController {
     
     @IBAction func toggleBas(_ sender: UISegmentedControl) {
         
-        let dunya = DunyaFonk()
-        let tur = TurkiyeFonk()
         
         switch toggleDegisti.selectedSegmentIndex
         {
+            
+        //MARK: - Dünya
         case 0:
             
-            olumSayisi.text = String(dunya.0)
-            kurtulanSayisi.text = String(dunya.1)
-            teshisSayisi.text = String(dunya.2)
-            if dunya.2 != 0 {
-                olumOrani.text = ("%\(100*dunya.0/dunya.2)")
+            AF.request("https://covidapi.info/api/v1/global").responseJSON { dunyaCevap in
+                switch dunyaCevap.result {
+                case .success(let value):
+                    
+                    let json = JSON(value)
+                    let olum = json["result"]["deaths"].intValue
+                    let iyi = json["result"]["recovered"].intValue
+                    let teshis = json["result"]["confirmed"].intValue
+                    
+                    
+                    self.olumSayisi.text = String(olum)
+                    self.kurtulanSayisi.text = String(iyi)
+                    self.teshisSayisi.text = String(teshis)
+                    self.olumOrani.text = ("%\(100*olum/teshis)")
+                    self.neredeLabel.text = "Dünyada"
+                    
+                    
+                case .failure(let error):
+                    print(error)
+                }
+                
             }
             
-            print("dünya")
+            
+            
+            //MARK: - Türkiye
             
         case 1:
             
             
-            olumSayisi.text = String(tur.0)
-            kurtulanSayisi.text = String(tur.1)
-            teshisSayisi.text = String(tur.2)
-            if tur.2 != 0 {
-                olumOrani.text = ("%\(100*tur.0/tur.2)")
-
+            AF.request("https://covidapi.info/api/v1/latest-date").response { tarihCevap in
+                
+                if let data = tarihCevap.data, let utf8Text = String(data: data, encoding: .utf8) {
+                    Son.sonGun = utf8Text
+                }
             }
-             print("türkiye")
+            
+            
+            AF.request("https://covidapi.info/api/v1/country/TUR/latest").responseJSON { turkiyeCevap in
+                switch turkiyeCevap.result {
+                case .success(let value):
+                    
+                    let json = JSON(value)
+                    Tur.olum = json["result"][Son.sonGun]["deaths"].intValue
+                    Tur.iyi = json["result"][Son.sonGun]["recovered"].intValue
+                    Tur.teshis = json["result"][Son.sonGun]["confirmed"].intValue
+                    self.olumSayisi.text = String(Tur.olum)
+                    self.kurtulanSayisi.text = String(Tur.iyi)
+                    self.teshisSayisi.text = String(Tur.teshis)
+                    self.olumOrani.text = ("%\(100*Tur.olum/Tur.teshis)")
+                    self.neredeLabel.text = "Türkiye'de"
+                case .failure(let error):
+                    print(error)
+                }
+                
+            }
             
         default:
             break;
         }
         
         
+        
     }
-    
-    
 }
+
+
+
+struct Tur {
+    static var olum: Int = 0
+    static var iyi: Int = 0
+    static var teshis: Int = 0
+}
+
+struct Son {
+    static var sonGun = ""
+}
+
 
 
 

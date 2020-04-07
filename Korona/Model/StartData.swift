@@ -29,7 +29,7 @@ func StartData() -> (Int, Int, Int){
 
     }
     
-    return (dunya.olum, dunya.iyi, dunya.teshis)
+    return (Data.olum, Data.iyi, Data.teshis)
 }
 
 

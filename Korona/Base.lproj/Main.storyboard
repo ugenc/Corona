@@ -24,13 +24,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4V4-8q-DVY">
                                                 <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="89.666666666666671"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="75"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kişi öldü." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-JC-WeP">
                                                 <rect key="frame" x="0.0" y="73.666666666666657" width="174.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -41,13 +41,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ta8-Pe-UC1">
                                                 <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="61"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="51"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kişi kurtuldu." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R34-mW-sg7">
                                                 <rect key="frame" x="0.0" y="51" width="174.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -58,13 +58,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="H7p-yE-OGT">
                                                 <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="62.333333333333336"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="52"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kişiye teşhis kondu." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zlj-cE-7UU">
                                                 <rect key="frame" x="0.0" y="52.333333333333314" width="174.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -85,7 +85,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ölüm oranı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DoL-9b-RtM">
                                                 <rect key="frame" x="0.0" y="79.666666666666629" width="174.66666666666666" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -96,6 +96,9 @@
                                 <rect key="frame" x="143" y="748" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Diğer Ülkeler"/>
+                                <connections>
+                                    <segue destination="YRh-F1-z35" kind="presentation" id="Sg1-x0-SeQ"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JIb-EK-Ce1">
                                 <rect key="frame" x="123" y="710" width="129" height="32"/>
@@ -108,16 +111,34 @@
                                     <action selector="toggleBas:" destination="BYZ-38-t0r" eventType="valueChanged" id="0wH-de-Z7U"/>
                                 </connections>
                             </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvX-yR-OMA">
+                                <rect key="frame" x="147.33333333333334" y="144" width="80.333333333333343" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dünyada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hx2-Mg-FRx">
+                                        <rect key="frame" x="0.0" y="0.0" width="80.333333333333329" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hx2-Mg-FRx" firstAttribute="centerY" secondItem="qvX-yR-OMA" secondAttribute="centerY" constant="-20" id="YIE-rM-985"/>
+                                    <constraint firstItem="hx2-Mg-FRx" firstAttribute="centerX" secondItem="qvX-yR-OMA" secondAttribute="centerX" id="xvc-kB-CaE"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qvX-yR-OMA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2WX-a6-MJa"/>
                             <constraint firstItem="e4R-ca-odR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oL-Bz-Bye"/>
+                            <constraint firstItem="qvX-yR-OMA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="iM1-iM-EEy"/>
                             <constraint firstItem="e4R-ca-odR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m0A-cI-lN7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="kurtulanSayisi" destination="ta8-Pe-UC1" id="NsK-0R-OGI"/>
+                        <outlet property="neredeLabel" destination="hx2-Mg-FRx" id="WRA-uH-fOv"/>
                         <outlet property="olumOrani" destination="Jq3-1j-SPD" id="nB8-X1-P2h"/>
                         <outlet property="olumSayisi" destination="4V4-8q-DVY" id="6KJ-Ct-Kuc"/>
                         <outlet property="teshisSayisi" destination="H7p-yE-OGT" id="vF3-yy-cl8"/>
@@ -133,7 +154,7 @@
             <objects>
                 <tableViewController id="YRh-F1-z35" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="O2q-TE-Asj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>

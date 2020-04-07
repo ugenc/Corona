@@ -15,9 +15,6 @@
 		0C3C5738243C7F8D00693F70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5736243C7F8D00693F70 /* LaunchScreen.storyboard */; };
 		0C3C5741243C7FE600693F70 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0C3C5740243C7FE600693F70 /* SwiftyJSON */; };
 		0CE7A58F243C822C00C0EB3B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0CE7A58E243C822C00C0EB3B /* Alamofire */; };
-		0CE7A594243CA34600C0EB3B /* DunyaFonk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */; };
-		0CE7A596243CAF2800C0EB3B /* TurkiyeFonk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */; };
-		0CE7A598243CD17B00C0EB3B /* StartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE7A597243CD17B00C0EB3B /* StartData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +26,6 @@
 		0C3C5734243C7F8D00693F70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3C5737243C7F8D00693F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C3C5739243C7F8D00693F70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DunyaFonk.swift; sourceTree = "<group>"; };
-		0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurkiyeFonk.swift; sourceTree = "<group>"; };
-		0CE7A597243CD17B00C0EB3B /* StartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +75,6 @@
 		0CE7A590243C89CE00C0EB3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0CE7A593243CA34600C0EB3B /* DunyaFonk.swift */,
-				0CE7A595243CAF2800C0EB3B /* TurkiyeFonk.swift */,
-				0CE7A597243CD17B00C0EB3B /* StartData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,10 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3C5730243C7F8C00693F70 /* ViewController.swift in Sources */,
-				0CE7A594243CA34600C0EB3B /* DunyaFonk.swift in Sources */,
-				0CE7A598243CD17B00C0EB3B /* StartData.swift in Sources */,
 				0C3C572C243C7F8C00693F70 /* AppDelegate.swift in Sources */,
-				0CE7A596243CAF2800C0EB3B /* TurkiyeFonk.swift in Sources */,
 				0C3C572E243C7F8C00693F70 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
